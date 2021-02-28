@@ -19,11 +19,10 @@ class UI {
         // create table row
         const row = document.createElement('tr');
 
-        const rowNumber = document.querySelectorAll('tr').length;
         let star = '';
         // create star
         for(let i = 1; i <= book.rating; i++) {
-            star += '<i class="fas fa-star"></i>';
+            star += '<i class="fas fa-star text-warning"></i>';
         }
 
         // create table data
@@ -33,7 +32,7 @@ class UI {
                         <td>${book.author}</td>
                         <td>${book.date}</td>
                         <td>${star}</td>
-                        <td><i class="fas fa-trash delete" style="cursor: pointer"></i></td>
+                        <td><i class="fas fa-trash text-danger delete" style="cursor: pointer"></i></td>
                         `;
         table.appendChild(row);
         counter++;
